@@ -97,7 +97,7 @@ console.log("");
 function checkIfHeterogram(input) {
     let isHeterogram = true;
     let charRepository = [];
-    for ( char of input) {
+    for (char of input) {
         if (charRepository.includes(char)) {
             isHeterogram = false;
         } else {
