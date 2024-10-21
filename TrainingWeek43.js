@@ -14,7 +14,17 @@ console.log("");
 console.log("Task: A");
 console.log("");
 
+function customizeXmasTree(height) {
+    if (Number.isInteger(height)) {
+        for ( i = 0; i < height; i++) {
 
+        }
+    } else {
+        console.log("ERROR: Please enter a whole number")
+    }
+}
+
+let drawTree = customizeXmasTree();
 
 /* -----------------------------------------------------------------------------
     Task: B
@@ -33,7 +43,17 @@ console.log("");
 console.log("Task: B");
 console.log("");
 
+function customizeArrow(size) {
+    if (Number.isInteger(size)) {
+        for ( i = 0; i < size + size - 1; i++) {
 
+        }
+    } else {
+        console.log("ERROR: Please enter a whole number")
+    }
+}
+
+let drawArrow = customizeArrow();
 
 /* -----------------------------------------------------------------------------
     Task: C
@@ -50,7 +70,15 @@ console.log("");
 console.log("Task: C");
 console.log("");
 
+function customizeBox(n, m) {
+    if (Number.isInteger(n, m)) {
+        
+    } else {
+        console.log("ERROR: Please enter whole numbers")
+    }
+}
 
+let drawBox = customizeBox();
 
 /* -----------------------------------------------------------------------------
     Task: D
