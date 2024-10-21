@@ -43,19 +43,18 @@ let drawTree = customizeXmasTree();
 
 console.log("");
 console.log("Task: B");
-console.log("");
 
 function customizeArrow(size) {
-    let dot = "* "
+    let dot = "* ";
     if (Number.isInteger(size)) {
         for ( i = 0; i <= size; i++) {
-            console.log(dot.repeat(i))
+            console.log(dot.repeat(i));
         }
         for ( i = size - 1; i >= 1; i--) {
-            console.log(dot.repeat(i))
+            console.log(dot.repeat(i));
         }
     } else {
-        console.log("ERROR: Please enter a whole number")
+        console.log("ERROR: Please enter a whole number");
     }
 }
 
