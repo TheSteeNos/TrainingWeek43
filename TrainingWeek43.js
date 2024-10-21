@@ -105,13 +105,13 @@ function checkIfHeterogram(input) {
         }
     }
     if(isHeterogram){
-        console.log("The word is a heterogram!");
+        console.log(input + " is a heterogram!");
     } else {
-        console.log("The word is not a heterogram!");
+        console.log(input + " is not a heterogram!");
     }
 }
 
-let hetCheck = checkIfHeterogram("background");
+let hetCheck = checkIfHeterogram("Background");
 
 /* -----------------------------------------------------------------------------
     Task: E
@@ -122,6 +122,27 @@ console.log("");
 console.log("Task: E");
 console.log("");
 
+function checkIfAnagrams(word1, word2) {
+    let isAnagram = true;
+    let charRepository1 = [...word1.toLowerCase()];
+    let charRepository2 = [...word2.toLowerCase()];
+    for (char of charRepository2) {
+        if (!charRepository1.includes(char)) {
+            isAnagram = false;
+        }
+    }
+    for (char of charRepository1) {
+        if (!charRepository2.includes(char)) {
+            isAnagram = false;
+        }
+    }
+    if(isAnagram){
+        console.log(word1 + " and " + word2 + " are anagrams!");
+    } else {
+        console.log(word1 + " and " + word2 + " are not anagrams!");
+    }
+}
 
+let anaCheck = checkIfAnagrams("The Eyes", "They See");
 
 console.log("");
