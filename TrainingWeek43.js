@@ -15,16 +15,18 @@ console.log("Task: A");
 console.log("");
 
 function customizeXmasTree(height) {
+
     const leafs = "*";
     const trunk = "X";
     const space = " ";
+
     if (Number.isInteger(height)) {
-        for ( i = 0; i < height; i++) {
+        for (i = 0; i < height; i++) {
             let crown = 2 * i + 1;
-            let center = height - i - 1;
+            let center = height - i;
             console.log(space.repeat(center) + leafs.repeat(crown));
         }
-        console.log(" ".repeat(height - 1) + trunk);
+        console.log(" ".repeat(height) + trunk);
     } else {
         console.log("ERROR: Please enter a whole number");
     }
@@ -49,12 +51,14 @@ console.log("");
 console.log("Task: B");
 
 function customizeArrow(size) {
+
     const dot = "* ";
+
     if (Number.isInteger(size)) {
-        for ( i = 0; i <= size; i++) {
+        for (i = 0; i <= size; i++) {
             console.log(dot.repeat(i));
         }
-        for ( i = size - 1; i >= 1; i--) {
+        for (i = size - 1; i >= 1; i--) {
             console.log(dot.repeat(i));
         }
     } else {
@@ -79,15 +83,25 @@ console.log("");
 console.log("Task: C");
 console.log("");
 
-function customizeBox(n, m) {
-    if (Number.isInteger(n, m)) {
-        
+function customizeBox(length, height) {
+
+    const horizontal = "---";
+    const vertical = "|";
+    const corner = "+";
+    const space = "   ";
+
+    if (Number.isInteger(length) && Number.isInteger(height)) {
+        console.log(corner + horizontal.repeat(length) + corner);
+        for (i = 0; i < height; i++) {
+            console.log(vertical + space.repeat(length) + vertical);
+        }
+        console.log(corner + horizontal.repeat(length) + corner);
     } else {
         console.log("ERROR: Please enter whole numbers");
     }
 }
 
-let drawBox = customizeBox();
+let drawBox = customizeBox(2, 2);
 
 /* -----------------------------------------------------------------------------
     Task: D
@@ -99,8 +113,10 @@ console.log("Task: D");
 console.log("");
 
 function checkIfHeterogram(input) {
+
     let isHeterogram = true;
     let charRepository = [];
+    
     for (char of input) {
         if (charRepository.includes(char)) {
             isHeterogram = false;
@@ -115,7 +131,7 @@ function checkIfHeterogram(input) {
     }
 }
 
-let hetCheck = checkIfHeterogram("Background");
+let heterogramCheck = checkIfHeterogram("Background");
 
 /* -----------------------------------------------------------------------------
     Task: E
@@ -127,9 +143,11 @@ console.log("Task: E");
 console.log("");
 
 function checkIfAnagrams(word1, word2) {
+
     let isAnagram = true;
     let charRepository1 = [...word1.toLowerCase()];
     let charRepository2 = [...word2.toLowerCase()];
+
     for (char of charRepository2) {
         if (!charRepository1.includes(char)) {
             isAnagram = false;
@@ -147,6 +165,6 @@ function checkIfAnagrams(word1, word2) {
     }
 }
 
-let anaCheck = checkIfAnagrams("The Eyes", "They See");
+let anagramCheck = checkIfAnagrams("The Eyes", "They See");
 
 console.log("");
