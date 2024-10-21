@@ -15,6 +15,8 @@ console.log("Task: A");
 console.log("");
 
 function customizeXmasTree(height) {
+    let leafs = "*";
+    let trunk = "X";
     if (Number.isInteger(height)) {
         for ( i = 0; i < height; i++) {
 
@@ -44,22 +46,26 @@ console.log("Task: B");
 console.log("");
 
 function customizeArrow(size) {
+    let dot = "* "
     if (Number.isInteger(size)) {
-        for ( i = 0; i < size + size - 1; i++) {
-
+        for ( i = 0; i <= size; i++) {
+            console.log(dot.repeat(i))
+        }
+        for ( i = size - 1; i >= 1; i--) {
+            console.log(dot.repeat(i))
         }
     } else {
         console.log("ERROR: Please enter a whole number")
     }
 }
 
-let drawArrow = customizeArrow();
+let drawArrow = customizeArrow(3);
 
 /* -----------------------------------------------------------------------------
     Task: C
-    Write a function that draws a box of n by m dimensions. Take into acount the diffrence in aspectratio.
+    Write a function that draws a box of n by m dimensions. Take into account the difference in aspect ratio.
 
-    Example: This is a aproximatly a 2 by 2 box. 
+    Example: This is a approximately a 2 by 2 box. 
     +--------+
     |        |
     |        |
