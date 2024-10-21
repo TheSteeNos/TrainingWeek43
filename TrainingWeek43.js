@@ -94,7 +94,24 @@ console.log("");
 console.log("Task: D");
 console.log("");
 
+function checkIfHeterogram(input) {
+    let isHeterogram = true;
+    let charRepository = [];
+    for ( char of input) {
+        if (charRepository.includes(char)) {
+            isHeterogram = false;
+        } else {
+            charRepository.push(char);
+        }
+    }
+    if(isHeterogram){
+        console.log("The word is a heterogram!");
+    } else {
+        console.log("The word is not a heterogram!");
+    }
+}
 
+let hetCheck = checkIfHeterogram("background");
 
 /* -----------------------------------------------------------------------------
     Task: E
